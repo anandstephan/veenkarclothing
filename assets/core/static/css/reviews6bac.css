@@ -1,0 +1,490 @@
+/* Reviews grid */
+#reviews header, 
+#reviews .no-touchevents header:hover{
+  background: transparent;
+}
+#reviews .reviews-wrapper{
+  padding-bottom: var(--base-block-unit);
+  padding-top: 0;
+}
+#reviews .reviews-grid{
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+}
+#reviews .reviews-grid .reviews-block{
+  position: relative;
+  width: 33.33%;
+  margin: 0;
+  padding: calc(var(--base-block-unit)/6);
+}
+#reviews .reviews-grid .review{
+  border-radius: var(--base-radius);
+}
+#reviews .review p{
+  text-align: left;
+  font-weight: 300;
+  line-height: 1.6em;
+}
+#reviews .review p a{
+  color: #313a44;
+}
+#reviews .review p a:hover{
+  color: #111;
+}
+#reviews .email{
+  padding: calc(var(--base-block-unit)/2);
+  box-shadow: 0 1.5em 1.5em rgba(0,0,0,0.1);
+  background: #fff;
+}
+#reviews .email .fields{
+  float: left;
+  padding-bottom: 1em;
+}
+#reviews .email .fields p{
+  font-weight: 500;
+}
+#reviews .email .sender-pic{
+  float: right;
+  width: 2em;
+  height: 2em;
+  background: #ccc;
+  border-radius: 2em;
+  overflow: hidden;
+}
+#reviews .email .seperator{
+  border: 1px solid #f4f4f5;
+  clear: both;
+  display: block;
+}
+#reviews .email .seperator:after{
+  content: '';
+  clear: both;
+}
+#reviews .email p.sender{
+  background: #d3e7fa;
+  display: inline-block;
+  text-align: left;
+  border-radius: 25px;
+  padding: 0 .6em;
+  margin: 0;
+}
+#reviews .email p.sender:after{
+  content: '';
+  background: url('assets/core/static/images/email-sender-arrow.svg') repeat;
+  background-size: 100% 100%;
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  margin-left: .4em;
+}
+#reviews .email p.receiver{
+  margin-top: .4em;
+}
+#reviews .email p.receiver span{
+  color: #aeb3bb;
+}
+#reviews .email p.body{
+  margin: 1.2em 0 0 0;
+}
+#reviews .sender-pic img{
+  width: 100%;
+}
+#reviews .sender-name a{
+  font-weight: 500;
+}
+#reviews .instagram .comment,
+#reviews .twitter .comment,
+#reviews .facebook .comment{
+  padding: calc(var(--base-block-unit)/2);
+  border-radius: var(--base-radius);
+  box-shadow: 0 1.5em 1.5em rgba(0,0,0,0.1);
+  position: relative;
+  background: #fff;
+}
+#reviews .instagram .comment:after,
+#reviews .twitter .comment:after,
+#reviews .facebook .comment:after{
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 36px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+}
+#reviews .instagram .sender,
+#reviews .twitter .sender,
+#reviews .facebook .sender{
+  padding-left: 1.5em;
+}
+#reviews .instagram .sender-pic,
+#reviews .twitter .sender-pic,
+#reviews .facebook .sender-pic{
+  float: left;
+  width: 2em;
+  height: 2em;
+  background: #ccc;
+  border-radius: 2em;
+  margin-top: 1em;
+  overflow: hidden;
+}
+#reviews .instagram .sender-name,
+#reviews .twitter .sender-name,
+#reviews .facebook .sender-name{
+  line-height: 4em;
+  font-weight: normal;
+  margin: 0;
+}
+#reviews .instagram .sender-name:before,
+#reviews .twitter .sender-name:before,
+#reviews .facebook .sender-name:before{
+  content: '';
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  margin: 0 .6em 0 1em;
+  vertical-align: middle;
+}
+#reviews .instagram .sender-name:before{
+  background: url('../images/icon-instagram.jpg') repeat;
+  background-size: 100% 100%;
+}
+#reviews .twitter .sender-name:before{
+  background: url('../images/icon-twitter.jpg') repeat;
+  background-size: 100% 100%;
+}
+#reviews .facebook .sender-name:before{
+  background: url('../images/icon-facebook.jpg') repeat;
+  background-size: 100% 100%;
+}
+#reviews .web{
+  box-shadow: 0 1.5em 1.5em rgba(0,0,0,0.1);
+  border-radius: var(--base-radius);
+  background: #fff;
+}
+#reviews .web .browser{
+  display: block;
+  border: 1px solid #dedde0;
+  background: #f2f0f2;
+  border-top-left-radius: var(--base-radius);
+  border-top-right-radius: var(--base-radius);
+  background: -moz-linear-gradient(top,  #f2f0f2 0%, #ebeaec 100%);
+  background: -webkit-linear-gradient(top,  #f2f0f2 0%,#ebeaec 100%);
+  background: linear-gradient(to bottom,  #f2f0f2 0%,#ebeaec 100%);
+  overflow: auto;
+  padding: 0.5em 0.5em 0.5em 80px;
+  position: relative;
+}
+#reviews .web .browser .fake-buttons{
+  background: url('assets/core/static/images/browser-buttons.svg') no-repeat;
+  background-size: 100% 100%;
+  height: 13px;
+  width: 53px;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  margin-top: -7px;
+}
+#reviews .web p.address{
+  background: #fff;
+  margin: 0;
+  font-weight: 500;
+  border-radius: 3px;
+  border: 1px solid #dedde0;
+  padding: 0.5em 0.75em;
+}
+#reviews .web p.address span.favicon{
+  height: 1.5em;
+  width: 1.5em;
+  display: inline-block;
+  border-radius: 1.5em;
+  margin-right: .4em;
+  vertical-align: middle;
+  position: relative;
+  overflow: hidden;
+}
+#reviews .web p.address span.favicon img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#reviews .web .excerpt{
+  padding: calc(var(--base-block-unit)/2);
+}
+#reviews .web .excerpt a.keep-reading{
+  color: #0066ff;
+}
+
+#reviews .picture-post{
+  box-shadow: 0 1.5em 1.5em rgba(0,0,0,0.1);
+  border-radius: var(--base-radius);
+  background: #fff;
+}
+#reviews .picture-post .photo{
+  width: 100%;
+  height: 0px;
+  padding-bottom: 100%;
+  overflow: hidden;
+  border-top-left-radius: var(--base-radius);
+  border-top-right-radius: var(--base-radius);
+}
+#reviews .picture-post .photo img{
+  width: 100%;
+  border-top-left-radius: var(--base-radius);
+  border-top-right-radius: var(--base-radius);
+}
+#reviews .picture-post .sender-wrap{
+  overflow: auto;
+  display: block;
+}
+#reviews .picture-post .sender{
+  padding: 1.2em 1.6em;
+  overflow: auto;
+}
+#reviews .picture-post .sender-pic{
+  position: relative;
+  float: left;
+  width: 2em;
+  height: 2em;
+  background: #ccc;
+  border-radius: 2em;
+  overflow: hidden;
+}
+#reviews .picture-post .sender-name{
+  float: left;
+  line-height: 2em;
+  font-weight: normal;
+  margin: 0;
+  margin-left: .8em;
+}
+#reviews .picture-post .caption{
+  padding-left: 2.8em;
+  padding-bottom: 1.4em;
+}
+
+/* Reviews intro */
+#reviews .reviews-intro-wrapper{
+  max-width: calc(var(--base-block-unit)*6);
+  margin: 0 auto;
+  width: 100%;
+  overflow: visible;
+  /*background: grey;*/
+}
+#reviews .reviews-intro-wrapper .reviews-intro{
+  width: 100%;
+  padding-bottom: 100%;
+  position: relative;
+}
+#reviews .city-pin{
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  margin-top: -60px;
+  margin-left: -60px;
+  border-radius: 120px;
+  -webkit-border-radius: 120px;
+  -moz-border-radius: 120px;
+  top: 0;
+  left: 0;
+  transform: scale(0,0);
+  opacity: 0;
+}
+#reviews .city-pin.active{
+  animation: showpin 1 ease 1.2s forwards ;
+  -webkit-animation: showpin 1 ease 1.2s forwards ;
+  -moz-animation: showpin 1 ease 1.2s forwards ;
+}
+@keyframes showpin{
+    0% {transform: scale(0,0);}
+    20% {opacity: 0.7;}
+    100% {transform: scale(1,1); opacity: 0;}
+  }
+@-webkit-keyframes showpin{
+    0% {-webkit-transform: scale(0,0);}
+    20% {opacity: 0.7;}
+    100% {-webkit-transform: scale(1,1); opacity: 0;}
+  }
+@-moz-keyframes showpin{
+    0% {-moz-transform: scale(0,0);}
+    20% {opacity: 0.7;}
+    100% {-moz-transform: scale(1,1); opacity: 0;}
+  }
+h2 .city-name:before,
+h2.everyone .city-name:before{
+  content: 'Thousands of people';
+}
+.city-pin#bombay{
+  top: 63%;
+  left: 22%
+}
+h2.bombay .city-name:before{
+  content: 'Bombay People';
+}
+.city-pin#dehradun{
+  top: 12%;
+  left: 66%
+}
+h2.dehradun .city-name:before{
+  content: 'People of Dehradun';
+}
+.city-pin#bangalore{
+  top: 86%;
+  left: 45%
+}
+h2.bangalore .city-name:before{
+  content: 'Bangaloreans';
+}
+.city-pin#pune{
+  top: 66%;
+  left: 24%
+}
+h2.pune .city-name:before{
+  content: 'Our Pune folks';
+}
+.city-pin#gangtok{
+  top: 24%;
+  left: 84%
+}
+h2.gangtok .city-name:before{
+  content: 'People of Gangtok';
+}
+.city-pin#delhi{
+  top: 28%;
+  left: 50%
+}
+h2.delhi .city-name:before{
+  content: 'Dilliwale';
+}
+.city-pin#amritsar{
+  top: 20%;
+  left: 40%
+}
+h2.amritsar .city-name:before{
+  content: 'Folks from Amritsar';
+}
+.city-pin#indore{
+  top: 50%;
+  left: 46%
+}
+h2.indore .city-name:before{
+  content: 'People from Indore';
+}
+.city-pin#chennai{
+  top: 88%;
+  left: 56%
+}
+h2.chennai .city-name:before{
+  content: 'Chennaites';
+}
+.city-pin#goa{
+  top: 80%;
+  left: 28%
+}
+h2.goa .city-name:before{
+  content: 'The Goans';
+}
+.city-pin#cochin{
+  top: 96%;
+  left: 36%
+}
+h2.cochin .city-name:before{
+  content: 'People of Cochin';
+}
+.city-pin#guwahati{
+  top: 28%;
+  left: 96%
+}
+h2.guwahati .city-name:before{
+  content: 'Folks from Guwahati';
+}
+#reviews .reviews-intro h2{
+  position: absolute;
+  top: 50%;
+  transform: translate3d(0,-50%,0);
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#reviews .reviews-intro h2 span.city{
+  white-space: nowrap;
+}
+/*Everyone
+Gangtok
+Goa*/
+#reviews .city-pin:nth-child(1),
+#reviews .city-pin:nth-child(6),
+#reviews .city-pin:nth-child(11)
+{
+  background: #56baba;
+}
+#reviews .city-pin:nth-child(1){
+  background: none !important;
+}
+h2 a,
+h2.everyone a,
+h2.gangtok a,
+h2.goa a{
+  color: #56baba;
+}
+/*Bombay
+Delhi
+cochin*/
+#reviews .city-pin:nth-child(2),
+#reviews .city-pin:nth-child(7),
+#reviews .city-pin:nth-child(12){
+  background: #51aaed;
+}
+h2.bombay a,
+h2.delhi a,
+h2.conchin a{
+  color: #51aaed;
+}
+/*Dehradun
+Amritsar
+Guwahati*/
+#reviews .city-pin:nth-child(3),
+#reviews .city-pin:nth-child(8),
+#reviews .city-pin:nth-child(13){
+  background: #e5536b;
+}
+h2.dehradun a,
+h2.amritsar a,
+h2.guwahati a{
+  color: #e5536b;
+}
+/*Bangalore
+Indore*/
+#reviews .city-pin:nth-child(4),
+#reviews .city-pin:nth-child(9),
+#reviews .city-pin:nth-child(14){
+  background: #dd9a2f;
+}
+h2.bangalore a,
+h2.indore a{
+  color: #dd9a2f;
+}
+/*Pune
+Chennai*/
+#reviews .city-pin:nth-child(5),
+#reviews .city-pin:nth-child(10),
+#reviews .city-pin:nth-child(15){
+  background: #97b732;
+}
+h2.pune a,
+h2.chennai a{
+  color: #97b732;
+}
+@media only screen and (max-width: 1024px){
+  #reviews .reviews-grid .reviews-block{
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 768px){
+  #reviews .reviews-grid .reviews-block{
+    width: 100%;
+  }
+}

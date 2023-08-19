@@ -1,0 +1,302 @@
+#hiring {
+  --hiring-grey: #99a3a2;
+  --hiring-black: #111111;
+  --hiring-mid-grey: #586563;
+  --hiring-spot: #993300;
+  --hiring-spot-dark: #722600;
+  background: var(--hiring-grey);
+  --fs-block-height: 80vh;
+}
+
+#hiring header,
+#hiring .no-touchevents header:hover {
+  background: transparent;
+}
+
+#hiring main section .container-fluid {
+  max-width: 960px;
+}
+
+#hiring .intro {
+  position: relative;
+  padding-top: 0px;
+}
+
+#hiring .intro .product-title {
+  bottom: auto;
+  text-align: center;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}
+
+#hiring .intro .intro-bg {
+  /*background: black;*/
+  height: var(--fs-block-height);
+}
+
+#hiring .intro .video-block {
+  width: 12vw;
+}
+
+#hiring .intro .video-block:nth-of-type(1) {
+  top: 8vh;
+  left: 24vw;
+  right: auto;
+  bottom: auto;
+  animation: shift-1 16s infinite alternate;
+  -webkit-animation: shift-1 16s infinite alternate;
+  -moz-animation: shift-1 16s infinite alternate;
+}
+
+#hiring .intro .video-block:nth-of-type(2) {
+  top: 24vh;
+  left: auto;
+  right: 8vw;
+  bottom: auto;
+  animation: shift-2 12s infinite alternate;
+  -webkit-animation: shift-2 12s infinite alternate;
+  -moz-animation: shift-2 12s infinite alternate;
+}
+
+#hiring .intro .video-block:nth-of-type(3) {
+  top: auto;
+  left: auto;
+  right: 28vw;
+  bottom: 8vh;
+  animation: shift-3 16s infinite alternate;
+  -webkit-animation: shift-3 16s infinite alternate;
+  -moz-animation: shift-3 16s infinite alternate;
+}
+
+#hiring .intro .video-block:nth-of-type(4) {
+  top: auto;
+  left: 8vw;
+  right: auto;
+  bottom: 24vh;
+  animation: shift-4 12s infinite alternate;
+  -webkit-animation: shift-4 12s infinite alternate;
+  -moz-animation: shift-4 12s infinite alternate;
+}
+
+#hiring .intro .video-block .video {
+  width: 100%;
+  padding-bottom: 100%;
+  height: 0;
+  background: var(--hiring-grey);
+  -webkit-box-shadow: 0 2em 1em rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2em 1em rgba(0, 0, 0, 0.1);
+}
+
+#hiring .intro .video-block video {
+  width: 100%;
+}
+
+#hiring .open-positions,
+#hiring .no-positions,
+#hiring .hiring-notes {
+  padding-top: 0px;
+  /*padding-bottom: var(--base-block-unit);*/
+}
+
+#hiring .open-positions .card,
+#hiring .no-positions .card,
+#hiring .hiring-notes .card {
+  padding: var(--base-block-unit) 0;
+  margin: 0;
+  border-top: 1px solid #848b8a;
+  box-shadow: none;
+  border-radius: 0px;
+  background: none;
+  max-width: none;
+}
+
+#hiring .hiring-notes .card {
+  border-top: none;
+}
+
+#hiring .hiring-notes {
+  background: var(--hiring-black);
+  color: var(--hiring-grey);
+}
+
+#hiring .open-positions .card h2,
+#hiring .open-positions .card h3 {
+  padding: 0;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+#hiring .open-positions .card h2,
+#hiring .hiring-notes .card h2 {
+  line-height: 1.25em;
+  padding-bottom: calc(var(--base-block-unit)/4);
+}
+
+#hiring .intro h1,
+#hiring .open-positions .card h2,
+#hiring .open-positions .card p,
+#hiring .no-positions .card h2,
+#hiring .no-positions .card p {
+  color: var(--hiring-black);
+}
+
+#hiring .open-positions .card p {
+  line-height: 1.4em;
+}
+
+#hiring .open-positions .card p a,
+#hiring .no-positions .card p a {
+  text-decoration: underline;
+}
+
+#hiring .open-positions .card .level a,
+#hiring .np-positions .card .level a {
+  text-decoration: underline;
+  color: var(--hiring-spot);
+}
+
+#hiring .open-positions .card .level a:hover,
+#hiring .no-positions .card .level a:hover {
+  color: var(--hiring-spot-dark);
+}
+
+#hiring .open-positions .position-title {
+  position: relative;
+}
+
+#hiring .open-positions .position-title .footnote {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: var(--hiring-mid-grey);
+}
+
+#hiring .open-positions .card .levels {
+  display: flex;
+}
+
+#hiring .open-positions .card .levels .level {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+  padding: 0 calc(var(--base-block-unit)/2) 0 0;
+}
+
+#hiring .open-positions .card .levels .level:last-child {
+  padding-right: 0;
+}
+
+#hiring .open-positions .card .details,
+#hiring .hiring-notes .card .details {
+  margin-top: calc(var(--base-block-unit)/8);
+}
+
+#hiring .open-positions .card .title,
+#hiring .hiring-notes .card .title {
+  margin-top: calc(var(--base-block-unit)/16);
+}
+
+#hiring .open-positions .card .aside {
+  margin-top: calc(var(--base-block-unit)/3);
+}
+
+#hiring .open-positions .card .aside .tags p {
+  display: inline-block;
+  background: var(--hiring-black);
+  color: #bfcecc;
+  padding: 0.15em 0.6em;
+  border-radius: 1em;
+}
+
+#hiring .hiring-notes ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+#hiring .hiring-notes ul li {
+  display: flex;
+  margin-top: 1em;
+}
+
+#hiring .hiring-notes ul li .bullet {
+  margin-right: 0.75em;
+}
+
+#hiring .hiring-notes p {
+  line-height: 1.4em;
+}
+
+#hiring .hiring-notes p.title {
+  color: var(--base-color);
+}
+
+#hiring .hiring-notes .aside {
+  margin-top: calc(var(--base-block-unit)/2);
+}
+
+#hiring .hiring-notes a {
+  color: var(--base-color);
+  opacity: 0.8;
+}
+
+#hiring .hiring-notes a:hover {
+  opacity: 1;
+}
+
+
+/* > 991px */
+@media only screen and (min-width: 992px) {
+  #hiring .open-positions .card .row {
+    display: flex;
+    align-content: stretch;
+  }
+
+  #hiring .open-positions .card .row .col-md-4 {
+    display: flex;
+    align-content: stretch;
+  }
+
+  #hiring .open-positions .position-title .footnote {
+    right: auto;
+    left: 0;
+    top: auto;
+    bottom: 0;
+  }
+}
+
+/* < 768px */
+@media only screen and (max-width: 768px) {
+  #hiring .hiring-notes .note-block {
+    margin-top: calc(var(--base-block-unit)/1.5);
+  }
+
+  #hiring .hiring-notes .note-block:nth-child(1) {
+    margin-top: 0px;
+  }
+
+  #hiring .intro .video-block {
+    width: 16vw;
+  }
+
+}
+
+/* < 480 */
+@media only screen and (max-width: 480px) {
+  #hiring .intro .video-block {
+    width: 24vw;
+  }
+
+  #hiring .open-positions .card .levels {
+    display: block;
+  }
+
+  #hiring .open-positions .card .levels .level {
+    padding: 0 0 calc(var(--base-block-unit)/2) 0;
+  }
+
+  #hiring .open-positions .card .levels .level:last-child {
+    padding-bottom: calc(var(--base-block-unit)/4);
+  }
+
+}

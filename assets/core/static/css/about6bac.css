@@ -1,0 +1,195 @@
+#about{
+  --about-dark: #000000;
+  --about-mid: #99907e;
+  --about-light: #f9f5ea;
+  --about-dark-alt: #2e1f0f;
+  background: var(--about-dark);
+}
+#about header, 
+#about .no-touchevents header:hover{
+  background: transparent;
+}
+#about main{
+  position: relative;
+}
+#about main section{
+  padding-top: 0px;
+}
+#about main section .block-break{
+  margin-top: 2em;
+}
+#about main section .info-block{
+  padding-bottom: 6em;
+}
+#about main section .container-fluid{
+  max-width: 1000px;
+}
+#about main section p{
+  color: var(--about-mid);
+  line-height: 1.3em;
+}
+#about main p.spot,
+#about main p .spot{
+  color: var(--about-light) !important;
+}
+#about main a.link p{
+  opacity: 50%;
+  line-height: 1.8em;
+  text-decoration: underline;
+}
+#about main .button{
+  color: var(--about-mid);
+  transition: color .3s ease;
+}
+#about main .button:hover{
+  color: var(--about-light);
+}
+#about main a .inline-icon.arrow{
+  height: 0.75em;
+  width: 0.75em;
+  vertical-align: text-top;
+  background: url('assets/core/static/images/icons/icon-more-reverse.svg') no-repeat;
+  background-size: 100% 100%;
+}
+#about main .button{
+  text-transform: none;
+  /*border-radius: 40px;*/
+}
+
+
+#about main .opening{
+  padding-top: calc(var(--base-block-unit)*2);
+  padding-bottom: calc(var(--base-block-unit)*1);
+  z-index: 3;
+}
+#about main .team{
+  position: relative;
+}
+#about .team-shot{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+}
+#about .team-members,
+#about .locations,
+#about .news,
+#about .link-block{
+  position: relative;
+  z-index: 2;
+}
+#about .team-members{
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+}
+#about main .team .locations{
+  padding-bottom: 4em;
+}
+#about main .team .button{
+  background: #3d1505;
+}
+
+#about main .brand{
+  position: relative;
+  min-height: 125vw;
+  background: var(--about-dark-alt);
+}
+#about main .brand .news{
+  position: relative;
+  padding-top: 6em;
+  padding-bottom: 4em;
+}
+#about .brand-shot{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+}
+#about main .brand .button{
+  background: var(--about-dark);
+}
+
+#about main .ender .info-block{
+  padding-bottom: 8em;
+}
+#about .believers{
+  position: relative;
+  z-index: 2;
+}
+#about .link-block .col{
+  padding-left: 0px !important;
+}
+
+/* Landscape */
+@media only screen and (orientation: landscape){
+  #about main .team{
+    position: relative;
+    padding-top: 75vw;
+  }
+  #about .team-shot{
+    height: 0px;
+    padding-bottom: 75%;
+    background: url(../images/about/team-new.jpg) no-repeat top center; 
+    background-size: contain;
+  }
+  #about .brand-shot{
+    height: 0px;
+    padding-bottom: 100%;
+    background: url(../images/about/brand.jpg) no-repeat bottom center; 
+    background-size: contain;
+  }
+}
+
+
+/* Portrait */
+@media only screen and (orientation: portrait){
+  #about main .team{
+    position: relative;
+    padding-top: 125vw;
+  }
+  #about .team-shot{
+    height: 0px;
+    padding-bottom: 125%;
+    background: url(../images/about/team-p-new.jpg) no-repeat center center; 
+    background-size: cover;
+  }
+  #about main .brand .link-block{
+    padding-bottom: 0px
+  }
+  #about .brand-shot{
+    position: relative;
+    padding-bottom: 125%;
+    background: url(../images/about/brand-p.jpg) no-repeat center center; 
+    background-size: cover;
+  }
+  #about main .ender{
+    padding-top: 4em;
+  }
+}
+
+
+/* < 991px */
+@media only screen and (max-width: 992px) {
+  #about main .brand{
+    min-height: 125vw;
+  }
+  #about main section .block-break-sm{
+    margin-top: 2em;
+  }
+}
+
+/* < 768px */
+@media only screen and (max-width: 768px) {
+  #about main section .block-break-xs{
+    margin-top: 2em;
+  }
+}
+/* < 480 */
+@media only screen and (max-width: 480px) {
+
+  
+}
